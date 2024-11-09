@@ -1,9 +1,10 @@
 from flask import Flask, send_file
+from flask_cors import CORS
 import paramiko
 from io import BytesIO
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route('/descargar_archivo')
 def descargar_excel():
